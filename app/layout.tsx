@@ -22,7 +22,7 @@ const manrope = Manrope({
 export const metadata: Metadata = {
   title: "Angles Natural — Ciencia, Innovación y Propósito",
   description: "Plataforma oficial de bienestar y suplementación funcional desarrollada desde Bolivia por Andrea Angles. Ciencia, valor a materias primas y economía circular.",
-  metadataBase: new URL("https://anglesnatural.com"),
+  metadataBase: new URL("https://angles-natural-plus.vercel.app"),
   keywords: [
     "Angles Natural",
     "Andrea Angles",

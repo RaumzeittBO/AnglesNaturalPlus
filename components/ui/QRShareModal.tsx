@@ -8,7 +8,7 @@ interface QRShareModalProps {
 }
 
 export const QRShareModal: React.FC<QRShareModalProps> = ({
-  url = typeof window !== "undefined" ? window.location.href : "https://anglesnatural.com",
+  url = typeof window !== "undefined" ? window.location.href : "https://angles-natural-plus.vercel.app",
 }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [copied, setCopied] = useState(false);

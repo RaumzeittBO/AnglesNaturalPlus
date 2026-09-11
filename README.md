@@ -1,76 +1,71 @@
-# ANGLES NATURAL — Ecosistema Vivo
-### Experiencia Digital Interactiva para Andrea Angles
+# ANGLES NATURAL — Plataforma Web Oficial & Ecosistema Vivo
 
-Una experiencia editorial, cinematográfica e interactiva diseñada para la presentación de **ANGLES NATURAL** ante jurados de innovación, emprendimiento y sostenibilidad.
+Plataforma digital integral y multifunción de **ANGLES NATURAL**, empresa boliviana de bienestar, ciencia farmacéutica y suplementación funcional fundada por la bioquímica farmacéutica Andrea Angles.
 
 ---
 
-## 🚀 Inicio Rápido
+## 🌐 Despliegue en Producción (Deployment)
+
+| Servicio | Detalle |
+| :--- | :--- |
+| **Repositorio GitHub** | [https://github.com/RaumzeittBO/AnglesNaturalPlus](https://github.com/RaumzeittBO/AnglesNaturalPlus) |
+| **Rama Principal** | `main` |
+| **Proyecto Vercel** | `angles-natural-plus` |
+| **URL Oficial de Producción** | [https://angles-natural-plus.vercel.app](https://angles-natural-plus.vercel.app) |
+| **Integración CI/CD** | Despliegue automático en Vercel con cada push a la rama `main` |
+
+---
+
+## 🚀 Inicio Rápido (Local Development)
 
 ### Requisitos Previos
-- Node.js 18.x o superior (Probado en Node.js 24)
+- Node.js 18.x o superior
 - npm, pnpm o yarn
 
-### Instalación
+### Instalación de Dependencias
 ```bash
 npm install
 ```
 
-### Ejecutar en Desarrollo
+### Ejecutar en Modo Desarrollo
 ```bash
 npm run dev
 ```
 Abre [http://localhost:3000](http://localhost:3000) en tu navegador.
 
-### Compilar para Producción
+### Compilar y Verificar para Producción
 ```bash
+npm run lint
 npm run build
 npm run start
 ```
 
 ---
 
-## 🌿 Características Principales
+## 🌿 Arquitectura de la Plataforma
 
-1. **Identidad Visual Derivada del Logotipo:**
-   - Sistema visual en tonos bosque profundo (`#0F3E2E`), esmeralda botánico (`#1E6B4C`), hoja viva y papel cálido editorial (`#FBF9F5`).
-   - Tipografía dual: `Fraunces` (serif editorial) + `Manrope` (sans funcional).
-
-2. **Dos Modos de Exploración:**
-   - **Modo Libre:** Scroll orgánico asistido por la raíz viva SVG interactiva.
-   - **Modo Jurado / 90 Segundos:** Navegación guiada paso a paso pensada para evaluaciones ejecutivas rápidas.
-
-3. **Capítulos Interactivos:**
-   - **01. Origen Bolivia:** Mapa topográfico abstracto con fichas botánicas de Tarwi, Cañahua, Arveja, Crema de Arroz y Vitaminas.
-   - **02. Laboratorio NutriQ:** Mesa de formulación drag & drop y tap accesible que registra cada ingrediente hasta revelar el concepto funcional.
-   - **03. Desafío de Decisiones:** Simulador con 100 recursos simbólicos para balancear Nutrición, Viabilidad, Sostenibilidad e Impacto.
-   - **04. Sostenibilidad Real:** Gestión de residuos en 3 flujos e inspector de capas de empaque ("Ver Capas").
-   - **05. Bienestar Animal:** Visión futura de devolución a albergues de rescate en Bolivia.
-   - **06. Andrea Angles & Visión:** Manifiesto de la fundadora, convergencia de los 5 pilares y reveal del isotipo.
-
-4. **Transparencia Anti-Greenwashing:**
-   - Sistema clasificador de claims (`YA LO HACEMOS`, `ESTAMOS TRABAJANDO EN ELLO`, `VISIÓN FUTURA`).
-
-5. **Paisaje Sonoro Web Audio API:**
-   - Sonido ambiental relajante y micro-clicks orgánicos generados proceduralmente sin dependencias de audio externas.
-
-6. **Acceso QR & Parámetros URL:**
-   - Detección de enlaces desde QR de video (`/?source=video` o `/?mode=jury`).
-   - Modal QR para abrir la web directamente en smartphones.
+1. **Portal Institucional (`/`):** Presentación de marca, ciencia funcional andina y accesos a productos y circularidad.
+2. **Nuestra Historia (`/nosotros`):** Biografía de Andrea Angles y su método de 7 pasos.
+3. **Catálogo de Productos (`/productos` & `/productos/[slug]`):** Fichas técnicas, pedidos directos a WhatsApp y **Pasaporte Circular** interactivo por componente de empaque.
+4. **Ecosistema Vivo (`/ecosistema`):** Experiencia inmersiva en 6 capítulos con soporte para modo jurado (`?mode=jury`) y escaneo QR desde video (`?source=video`).
+5. **Angles Circular (`/circular`):**
+   - `/circular/devuelve`: Guía de preparación y retorno de envases.
+   - `/circular/puntos`: Directorio nacional y mapa interactivo de acopio.
+   - `/circular/donde-va`: Guía de separación de residuos y minijuego educativo en 3 flujos.
+   - `/circular/impacto`: Trazabilidad real y transparente.
+   - `/circular/aliados`: Directorio de aliados y formulario de postulación.
+   - `/circular/jornadas`: Jornadas presenciales comunitarias.
+   - `/circular/retos`: Desafíos de sostenibilidad con Eco-Puntos.
+   - `/circular/eco-puntos`: Niveles botánicos (*Semilla a Bosque*) y recompensas.
+6. **Panel de Administración (`/admin`):** Dashboard integral con operaciones CRUD para catálogo, puntos de acopio, residuos, eventos, solicitudes e impacto.
 
 ---
 
-## 📦 Despliegue en Vercel
+## 📚 Documentación Técnica
 
-1. Sube este repositorio a GitHub / GitLab / Bitbucket.
-2. Ingresa a [Vercel](https://vercel.com) e importa el proyecto.
-3. El framework preset de Next.js se detectará automáticamente.
-4. Haz clic en **Deploy**. El proyecto compilará y se desplegará instantáneamente sin necesidad de base de datos ni variables complejas.
-
----
-
-## 📚 Documentación Adicional
-
+- [Guía de Integración con Firebase](docs/FIREBASE.md)
+- [Sistema de Economía Circular](docs/CIRCULAR_SYSTEM.md)
+- [Manual del Administrador](docs/ADMIN.md)
 - [Arquitectura Técnica](docs/ARCHITECTURE.md)
 - [Sistema de Diseño & Tokens](docs/DESIGN_SYSTEM.md)
 - [Guía de Contenidos & Anti-Greenwashing](docs/CONTENT_GUIDE.md)
