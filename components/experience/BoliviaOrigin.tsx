@@ -79,12 +79,13 @@ export const BoliviaOrigin: React.FC<BoliviaOriginProps> = ({ onIngredientToLab 
             </span>
           </div>
 
-          <div className="relative z-10 w-full h-64 sm:h-80 my-4">
+          {/* Desktop Interactive Topographic Map (sm and up) */}
+          <div className="relative z-10 w-full h-64 sm:h-80 my-4 hidden sm:block">
             {INGREDIENTS.map((item) => (
               <button
                 key={item.id}
                 onClick={() => handleSelect(item)}
-                className="group absolute -translate-x-1/2 -translate-y-1/2 p-2 focus-visible:ring-2 focus-visible:ring-brand-emerald rounded-2xl transition-all duration-300"
+                className="group absolute -translate-x-1/2 -translate-y-1/2 p-2 focus-visible:ring-2 focus-visible:ring-brand-emerald rounded-2xl transition-all duration-300 min-h-[44px]"
                 style={{
                   left: `${item.coordinates.x}%`,
                   top: `${item.coordinates.y}%`,
@@ -114,14 +115,52 @@ export const BoliviaOrigin: React.FC<BoliviaOriginProps> = ({ onIngredientToLab 
             ))}
           </div>
 
+          {/* Mobile-Friendly Botanical Grid (below sm) */}
+          <div className="relative z-10 w-full grid grid-cols-2 gap-2.5 my-3 sm:hidden">
+            {INGREDIENTS.map((item) => (
+              <button
+                key={item.id}
+                onClick={() => handleSelect(item)}
+                className="p-3 rounded-2xl bg-brand-paper/90 border shadow-soft flex flex-col justify-between text-left active:scale-95 transition-transform min-h-[80px]"
+                style={{ borderColor: `${item.color}60` }}
+                aria-label={`Ver ficha de ${item.name}`}
+              >
+                <div className="flex items-center justify-between gap-1 w-full">
+                  <span
+                    className="w-2.5 h-2.5 rounded-full shrink-0 shadow-sm"
+                    style={{ backgroundColor: item.color }}
+                  />
+                  {item.isProtagonist ? (
+                    <span className="flex items-center gap-0.5 text-[9px] font-mono text-brand-accent-gold uppercase font-bold">
+                      <Sparkles className="w-2.5 h-2.5" /> Clave
+                    </span>
+                  ) : (
+                    <span className="text-[9px] font-mono text-brand-muted uppercase">
+                      {item.originBadge}
+                    </span>
+                  )}
+                </div>
+
+                <div>
+                  <span className="text-xs font-bold text-brand-forest block leading-tight">
+                    {item.name}
+                  </span>
+                  <span className="text-[10px] text-brand-muted font-mono block mt-0.5">
+                    {item.category}
+                  </span>
+                </div>
+              </button>
+            ))}
+          </div>
+
           <div className="relative z-10 pt-4 border-t border-brand-border/60 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-xs text-brand-muted">
             <div className="flex items-center gap-2">
               <Info className="w-4 h-4 text-brand-emerald shrink-0" />
-              <span>
-                Ingredientes andinos de alta densidad biológica bajo formulación de NutriQ.
+              <span className="text-[11px] sm:text-xs leading-relaxed">
+                Ingredientes andinos y amazónicos de alta densidad biológica formulados por NutriQ.
               </span>
             </div>
-            <div className="flex items-center gap-4 text-[11px] font-mono">
+            <div className="flex items-center gap-4 text-[10px] sm:text-[11px] font-mono">
               <span className="flex items-center gap-1.5">
                 <span className="w-2 h-2 rounded-full bg-brand-accent-gold" /> Protagonistas
               </span>
@@ -132,8 +171,8 @@ export const BoliviaOrigin: React.FC<BoliviaOriginProps> = ({ onIngredientToLab 
           </div>
         </div>
 
-        <div className="text-center max-w-xl mx-auto space-y-3 pt-6">
-          <p className="font-editorial text-xl sm:text-2xl text-brand-forest font-light italic">
+        <div className="text-center max-w-xl mx-auto space-y-2 sm:space-y-3 pt-4 sm:pt-6 px-4">
+          <p className="font-editorial text-lg sm:text-2xl text-brand-forest font-light italic leading-snug">
             “Pero un ingrediente no se convierte en un producto por sí solo.”
           </p>
           <p className="text-xs sm:text-sm text-brand-muted">

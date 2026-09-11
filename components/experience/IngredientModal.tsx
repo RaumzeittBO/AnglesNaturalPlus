@@ -20,22 +20,22 @@ export const IngredientModal: React.FC<IngredientModalProps> = ({
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-brand-forest/60 backdrop-blur-sm animate-in fade-in"
+      className="fixed inset-0 z-50 flex items-end sm:items-center justify-center p-0 sm:p-6 bg-brand-forest/60 backdrop-blur-sm animate-in fade-in"
       onClick={onClose}
     >
       <div
-        className="relative w-full max-w-lg bg-brand-paper rounded-3xl p-6 sm:p-8 shadow-elevated border border-brand-border space-y-6 text-left animate-in zoom-in-95 duration-200"
+        className="relative w-full sm:max-w-lg bg-brand-paper rounded-t-3xl sm:rounded-3xl p-5 sm:p-8 shadow-elevated border border-brand-border space-y-5 sm:space-y-6 text-left max-h-[90dvh] overflow-y-auto pb-[calc(1.5rem+env(safe-area-inset-bottom))] animate-in slide-in-from-bottom-6 sm:zoom-in-95 duration-200"
         onClick={(e) => e.stopPropagation()}
       >
         <button
           onClick={onClose}
-          className="absolute top-5 right-5 p-2 rounded-full hover:bg-brand-cream text-brand-muted hover:text-brand-forest transition-colors"
+          className="absolute top-4 right-4 sm:top-5 sm:right-5 p-2 rounded-full hover:bg-brand-cream text-brand-muted hover:text-brand-forest transition-colors min-h-[44px] min-w-[44px] flex items-center justify-center"
           aria-label="Cerrar ficha de ingrediente"
         >
           <X className="w-5 h-5" />
         </button>
 
-        <div className="space-y-2 pr-8">
+        <div className="space-y-1.5 pr-8 pt-1 sm:pt-0">
           <div className="flex items-center gap-2 text-xs font-mono tracking-widest text-brand-emerald uppercase">
             <MapPin className="w-3.5 h-3.5" />
             <span>{ingredient.originBadge}</span>

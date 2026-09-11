@@ -37,19 +37,19 @@ export const GuidedModeBar: React.FC<GuidedModeBarProps> = ({
   };
 
   return (
-    <div className="fixed bottom-5 left-1/2 -translate-x-1/2 z-50 w-[94%] max-w-2xl bg-brand-forest/95 backdrop-blur-md text-brand-paper rounded-2xl shadow-elevated border border-brand-forest/40 p-3 sm:p-4 animate-in slide-in-from-bottom-6">
-      <div className="flex items-center justify-between gap-3">
-        <div className="flex items-center gap-2.5 min-w-0">
-          <div className="w-7 h-7 rounded-lg bg-brand-emerald/40 flex items-center justify-center text-brand-leafLight shrink-0">
-            <Sparkles className="w-4 h-4" />
+    <div className="fixed bottom-[calc(1rem+env(safe-area-inset-bottom))] left-1/2 -translate-x-1/2 z-50 w-[94%] max-w-2xl bg-brand-forest/95 backdrop-blur-md text-brand-paper rounded-2xl shadow-elevated border border-brand-forest/40 p-2.5 sm:p-4 animate-in slide-in-from-bottom-6">
+      <div className="flex items-center justify-between gap-2 sm:gap-3">
+        <div className="flex items-center gap-2 sm:gap-2.5 min-w-0">
+          <div className="w-6 h-6 sm:w-7 sm:h-7 rounded-lg bg-brand-emerald/40 flex items-center justify-center text-brand-leafLight shrink-0">
+            <Sparkles className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
           </div>
           <div className="truncate">
-            <div className="flex items-center gap-2 text-[10px] sm:text-xs font-mono tracking-widest text-brand-leafLight uppercase">
+            <div className="flex items-center gap-1.5 sm:gap-2 text-[9px] sm:text-xs font-mono tracking-widest text-brand-leafLight uppercase">
               <span>Capítulo {current.number} / 06</span>
               <span className="text-white/40 hidden sm:inline">•</span>
               <span className="text-white/70 truncate hidden sm:inline">{current.id}</span>
             </div>
-            <p className="text-xs sm:text-sm font-medium text-white truncate max-w-[200px] sm:max-w-xs md:max-w-sm">
+            <p className="text-[11px] sm:text-sm font-medium text-white truncate max-w-[140px] xs:max-w-[200px] sm:max-w-xs md:max-w-sm">
               {current.title}
             </p>
           </div>

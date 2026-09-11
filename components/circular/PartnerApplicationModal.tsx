@@ -42,9 +42,9 @@ export const PartnerApplicationModal: React.FC<PartnerApplicationModalProps> = (
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-brand-forest/60 backdrop-blur-sm animate-in fade-in" onClick={onClose}>
-      <div className="relative w-full max-w-lg bg-brand-paper rounded-3xl p-6 sm:p-8 shadow-elevated border border-brand-border space-y-6 animate-in zoom-in-95" onClick={(e) => e.stopPropagation()}>
-        <button onClick={onClose} className="absolute top-4 right-4 p-2 rounded-full hover:bg-brand-cream text-brand-muted hover:text-brand-forest transition-colors">
+    <div className="fixed inset-0 z-50 flex items-end sm:items-center justify-center p-0 sm:p-4 bg-brand-forest/60 backdrop-blur-sm animate-in fade-in" onClick={onClose}>
+      <div className="relative w-full sm:max-w-lg bg-brand-paper rounded-t-3xl sm:rounded-3xl p-5 sm:p-8 shadow-elevated border border-brand-border space-y-5 max-h-[90dvh] overflow-y-auto pb-[calc(1.5rem+env(safe-area-inset-bottom))] animate-in slide-in-from-bottom-6 sm:zoom-in-95" onClick={(e) => e.stopPropagation()}>
+        <button onClick={onClose} className="absolute top-4 right-4 p-2 rounded-full hover:bg-brand-cream text-brand-muted hover:text-brand-forest transition-colors min-h-[44px] min-w-[44px] flex items-center justify-center" aria-label="Cerrar modal">
           <X className="w-5 h-5" />
         </button>
 
