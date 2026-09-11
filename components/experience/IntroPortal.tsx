@@ -36,7 +36,7 @@ export const IntroPortal: React.FC<IntroPortalProps> = ({
   };
 
   return (
-    <section className="relative min-h-[100dvh] sm:min-h-screen flex flex-col items-center justify-between px-4 sm:px-6 py-8 sm:py-12 md:py-16 text-center overflow-hidden bg-brand-paper bg-grain">
+    <section id="semilla" className="relative min-h-[100dvh] sm:min-h-screen flex flex-col items-center justify-between px-4 sm:px-6 py-8 sm:py-12 md:py-16 text-center overflow-hidden bg-brand-paper bg-grain">
       <header className="w-full max-w-5xl flex items-center justify-between z-20">
         <div className="flex items-center gap-2.5 sm:gap-3 text-left">
           <div className="relative w-8 h-8 sm:w-11 sm:h-11 rounded-full bg-brand-cream border border-brand-border flex items-center justify-center shadow-soft overflow-hidden p-1 shrink-0">
