@@ -416,19 +416,13 @@ export const Navbar: React.FC = () => {
               </div>
             )}
 
-            {/* Admin quick link footer */}
+            {/* Brand footer inside drawer */}
             <div className="pt-4 border-t border-brand-border/60 flex items-center justify-between text-xs text-brand-muted">
-              <Link
-                href="/admin"
-                onClick={() => setIsOpen(false)}
-                className="flex items-center gap-1.5 hover:text-brand-forest text-brand-muted font-mono text-[11px] p-2"
-              >
-                <SlidersHorizontal className="w-3.5 h-3.5" />
-                <span>Panel de Administración</span>
-              </Link>
-
+              <span className="text-[11px] font-mono text-brand-muted/80">
+                Angles Natural • Bolivia
+              </span>
               <span className="text-[10px] font-mono text-brand-muted/70">
-                v1.0.0 Bolivian Platform
+                Ciencia, Bienestar & Circularidad
               </span>
             </div>
           </div>

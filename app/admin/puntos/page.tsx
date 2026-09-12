@@ -29,7 +29,7 @@ export default function AdminPuntosPage() {
       acceptedMaterials: ["Frascos de vidrio ámbar", "Tapas PEAD", "Blísteres limpios"],
       status: "ACTIVE",
       coordinates: { lat: -17.3935, lng: -66.157 },
-      phone: "+591 70000000",
+      phone: "+591 76529243",
     });
     setIsEditing(true);
   };

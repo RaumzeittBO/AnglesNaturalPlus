@@ -106,41 +106,47 @@ export default function HomePage() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {featuredProducts.map((p) => (
-            <div key={p.id} className="group p-6 rounded-3xl bg-brand-cream/60 border border-brand-border hover:border-brand-emerald/40 transition-all duration-300 shadow-soft hover:shadow-card flex flex-col justify-between space-y-6">
+            <div key={p.id} className="group p-5 sm:p-6 rounded-3xl bg-brand-cream/60 border border-brand-border hover:border-brand-emerald/40 transition-all duration-300 shadow-soft hover:shadow-card flex flex-col justify-between space-y-6">
               <div className="space-y-4">
-                <div className="flex items-center justify-between">
-                  <span className="text-[10px] font-mono tracking-wider text-brand-muted uppercase">
+                <div className="flex items-center justify-between gap-2">
+                  <span className="text-[10px] font-mono tracking-wider text-brand-emerald font-semibold uppercase">
                     {p.category}
                   </span>
                   {p.badge && (
-                    <span className="px-2 py-0.5 rounded-full bg-brand-forest/10 text-brand-forest text-[10px] font-mono font-medium">
+                    <span className="px-2.5 py-0.5 rounded-full bg-brand-forest/10 text-brand-forest text-[10px] font-mono font-medium truncate">
                       {p.badge}
                     </span>
                   )}
                 </div>
 
-                <div className="w-full h-44 rounded-2xl bg-brand-paper border border-brand-border flex items-center justify-center p-4 relative overflow-hidden group-hover:scale-[1.02] transition-transform">
-                  <Image src={p.image || "/brand/logo.png"} alt={p.name} width={90} height={90} className="object-contain" />
+                <div className="w-full aspect-[4/5] rounded-2xl bg-brand-paper border border-brand-border flex items-center justify-center p-2 relative overflow-hidden group-hover:scale-[1.02] transition-transform">
+                  <Image
+                    src={p.image || "/brand/logo.png"}
+                    alt={p.name}
+                    fill
+                    className="object-contain p-2"
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                  />
                 </div>
 
                 <div className="space-y-1.5">
-                  <h3 className="font-editorial text-xl text-brand-forest font-light">
+                  <h3 className="font-editorial text-2xl text-brand-forest font-light">
                     {p.name}
                   </h3>
-                  <p className="text-xs text-brand-muted leading-relaxed line-clamp-2">
+                  <p className="text-xs text-brand-muted leading-relaxed line-clamp-3">
                     {p.shortDesc}
                   </p>
                 </div>
               </div>
 
-              <div className="pt-4 border-t border-brand-border/60 flex items-center justify-between">
+              <div className="pt-4 border-t border-brand-border/60 flex items-center justify-between gap-2">
                 <div>
-                  <span className="text-[10px] font-mono text-brand-muted block">Precio Ref.</span>
-                  <span className="text-sm font-semibold text-brand-forest">{p.priceBs} Bs</span>
+                  <span className="text-[10px] font-mono text-brand-muted block">Precio</span>
+                  <span className="text-base font-semibold text-brand-forest">{p.priceBs} Bs</span>
                 </div>
                 <Link href={`/productos/${p.slug}`}>
-                  <Button variant="secondary" size="sm" icon={<ArrowRight className="w-3 h-3" />}>
-                    Ver Ficha
+                  <Button variant="primary" size="sm" icon={<ArrowRight className="w-3.5 h-3.5" />}>
+                    Ver Detalle
                   </Button>
                 </Link>
               </div>

@@ -147,12 +147,6 @@ export const Footer: React.FC = () => {
                 Clasificación estricta de claims entre lo que ya hacemos hoy y nuestra visión de futuro.
               </p>
             </div>
-
-            <div className="pt-2 text-[10px] font-mono text-brand-muted/70">
-              <Link href="/admin" className="hover:underline opacity-50 hover:opacity-100 transition-opacity">
-                Acceso Administrativo
-              </Link>
-            </div>
           </div>
         </div>
 

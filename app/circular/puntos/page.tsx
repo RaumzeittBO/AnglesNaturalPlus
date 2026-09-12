@@ -43,18 +43,24 @@ export default function PuntosRecoleccionPage() {
         <div className="space-y-3">
           <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-brand-cream border border-brand-border text-xs font-mono text-brand-emerald uppercase">
             <MapPin className="w-3.5 h-3.5" />
-            <span>DIRECTORIO DE PUNTOS ALIADOS</span>
+            <span>DIRECTORIO DE PUNTOS ALIADOS • PROYECTO PILOTO</span>
           </div>
           <h1 className="font-editorial text-4xl sm:text-5xl text-brand-forest font-light">
             Puntos de Recolección & Retorno
           </h1>
           <p className="text-brand-muted text-sm sm:text-base leading-relaxed">
-            Espacios aliados donde puedes entregar tus envases Angles y otros residuos secos clasificados para garantizar su trazabilidad y reuso.
+            Sede del <strong>Taller Piloto en Cochabamba</strong> y futura red de espacios aliados donde podrás entregar tus envases de Microbiota, Artromag y Kit de Mascotas para garantizar su trazabilidad y reuso.
           </p>
+          <div className="p-3.5 rounded-2xl bg-brand-emerald/10 border border-brand-emerald/20 text-xs text-brand-forest flex items-start gap-2.5">
+            <span className="w-2 h-2 rounded-full bg-brand-leaf animate-pulse mt-1 shrink-0" />
+            <span>
+              <strong>Fase Piloto en Desarrollo:</strong> Estamos acondicionando nuestro taller central en Cochabamba (Calle San Felipe de Austria entre Melchor Pérez de Olguín y Av. Madrid). La apertura comunitaria se anunciará próximamente.
+            </span>
+          </div>
         </div>
 
-        <Button variant="primary" size="md" onClick={() => setIsModalOpen(true)} icon={<Users className="w-4 h-4" />}>
-          Quiero Ser Aliado
+        <Button variant="secondary" size="md" onClick={() => setIsModalOpen(true)} icon={<Users className="w-4 h-4" />}>
+          Quiero Ser Aliado (Próximamente)
         </Button>
       </div>
 

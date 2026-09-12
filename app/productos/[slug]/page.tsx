@@ -42,9 +42,16 @@ export default async function ProductDetailPage({
       {/* Main Product Overview */}
       <div className="grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-12 items-start">
         {/* Left: Product Image Showcase */}
-        <div className="md:col-span-5 p-8 rounded-3xl bg-brand-cream/60 border border-brand-border flex items-center justify-center min-h-[340px]">
-          <div className="relative w-48 h-48 sm:w-56 sm:h-56 flex items-center justify-center">
-            <Image src={product.image || "/brand/logo.png"} alt={product.name} width={180} height={180} className="object-contain" priority />
+        <div className="md:col-span-5 p-4 sm:p-6 rounded-3xl bg-brand-cream/60 border border-brand-border flex items-center justify-center min-h-[380px] sm:min-h-[460px] overflow-hidden">
+          <div className="relative w-full max-w-[340px] aspect-[4/5] rounded-2xl overflow-hidden shadow-card border border-brand-border/60 bg-brand-paper">
+            <Image
+              src={product.image || "/brand/logo.png"}
+              alt={product.name}
+              fill
+              className="object-contain p-2"
+              priority
+              sizes="(max-width: 768px) 100vw, 40vw"
+            />
           </div>
         </div>
 

@@ -48,102 +48,42 @@ export const PartnerApplicationModal: React.FC<PartnerApplicationModalProps> = (
           <X className="w-5 h-5" />
         </button>
 
-        {!submitted ? (
-          <form onSubmit={handleSubmit} className="space-y-4">
-            <div className="space-y-1">
-              <span className="text-xs font-mono tracking-widest text-brand-emerald uppercase">
-                RED ANGLES CIRCULAR
-              </span>
-              <h3 className="font-editorial text-2xl text-brand-forest font-light">
-                Postular como Punto Aliado
-              </h3>
-              <p className="text-xs text-brand-muted">
-                Farmacias, gimnasios, tiendas saludables y centros educativos pueden sumarse como puntos de retorno certificados.
-              </p>
-            </div>
+        <div className="text-center py-6 space-y-5 animate-in zoom-in-95">
+          <div className="w-14 h-14 rounded-full bg-brand-emerald/10 text-brand-emerald flex items-center justify-center mx-auto">
+            <Building2 className="w-7 h-7" />
+          </div>
 
-            <div className="space-y-3 text-xs">
-              <div>
-                <label className="block text-brand-forest font-medium mb-1">Nombre del Establecimiento / Organización *</label>
-                <input
-                  type="text"
-                  required
-                  value={formData.name}
-                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  placeholder="Ej: Gimnasio Vitality, Farmacia Naturalis..."
-                  className="w-full p-2.5 rounded-xl bg-brand-cream border border-brand-border text-brand-forest focus:outline-none focus:ring-1 focus:ring-brand-emerald"
-                />
-              </div>
-
-              <div className="grid grid-cols-2 gap-3">
-                <div>
-                  <label className="block text-brand-forest font-medium mb-1">Tipo de Espacio</label>
-                  <select
-                    value={formData.businessType}
-                    onChange={(e) => setFormData({ ...formData, businessType: e.target.value as any })}
-                    className="w-full p-2.5 rounded-xl bg-brand-cream border border-brand-border text-brand-forest focus:outline-none focus:ring-1 focus:ring-brand-emerald"
-                  >
-                    <option value="COMERCIO">Comercio / Tienda</option>
-                    <option value="GESTOR_RECICLADOR">Gestor / Reciclador</option>
-                    <option value="INSTITUCION">Institución / Centro</option>
-                    <option value="CONSUMIDOR_LIDER">Comunidad / Consumidor</option>
-                  </select>
-                </div>
-
-                <div>
-                  <label className="block text-brand-forest font-medium mb-1">Ciudad *</label>
-                  <select
-                    value={formData.city}
-                    onChange={(e) => setFormData({ ...formData, city: e.target.value })}
-                    className="w-full p-2.5 rounded-xl bg-brand-cream border border-brand-border text-brand-forest focus:outline-none focus:ring-1 focus:ring-brand-emerald"
-                  >
-                    <option value="La Paz">La Paz</option>
-                    <option value="Cochabamba">Cochabamba</option>
-                    <option value="Santa Cruz">Santa Cruz</option>
-                    <option value="Tarija">Tarija</option>
-                    <option value="Sucre">Sucre</option>
-                    <option value="Otra">Otra ciudad</option>
-                  </select>
-                </div>
-              </div>
-
-              <div>
-                <label className="block text-brand-forest font-medium mb-1">Breve Descripción o Mensaje</label>
-                <textarea
-                  rows={3}
-                  value={formData.description}
-                  onChange={(e) => setFormData({ ...formData, description: e.target.value })}
-                  placeholder="¿Por qué te gustaría sumarte a la red de retorno?"
-                  className="w-full p-2.5 rounded-xl bg-brand-cream border border-brand-border text-brand-forest focus:outline-none focus:ring-1 focus:ring-brand-emerald"
-                />
-              </div>
-            </div>
-
-            <div className="pt-2 flex items-center justify-end gap-3">
-              <Button variant="ghost" size="sm" type="button" onClick={onClose}>
-                Cancelar
-              </Button>
-              <Button variant="primary" size="md" type="submit" icon={<Send className="w-3.5 h-3.5" />}>
-                Enviar Postulación
-              </Button>
-            </div>
-          </form>
-        ) : (
-          <div className="text-center py-8 space-y-4 animate-in zoom-in-95">
-            <div className="w-12 h-12 rounded-full bg-brand-emerald/10 text-brand-emerald flex items-center justify-center mx-auto">
-              <CheckCircle2 className="w-6 h-6" />
-            </div>
-            <h4 className="font-editorial text-2xl text-brand-forest font-light">
-              ¡Postulación Registrada!
-            </h4>
-            <p className="text-xs text-brand-muted max-w-sm mx-auto">
-              Revisaremos los datos en el panel de administración. Una vez aprobada, tu punto aparecerá en el mapa de Angles Circular con el sello de Aliado Verificado.
+          <div className="space-y-2">
+            <span className="inline-block px-3 py-1 rounded-full bg-brand-cream border border-brand-border text-[10px] font-mono text-brand-emerald uppercase tracking-wider font-semibold">
+              Fase Piloto en Adecuación Técnica
+            </span>
+            <h3 className="font-editorial text-2xl sm:text-3xl text-brand-forest font-light">
+              Red de Aliados • Próximamente
+            </h3>
+            <p className="text-xs sm:text-sm text-brand-muted max-w-md mx-auto leading-relaxed">
+              Estamos preparando la infraestructura del <strong>Taller Piloto en Cochabamba</strong> (calle San Felipe de Austria entre Melchor Pérez de Olguín y Av. Madrid) para la recepción, control y reciclaje de envases.
             </p>
-            <Button variant="secondary" size="sm" onClick={onClose}>
-              Cerrar
+            <p className="text-xs text-brand-forest/80 font-medium pt-1">
+              Las postulaciones públicas para comercios, farmacias y centros aliados se habilitarán próximamente.
+            </p>
+          </div>
+
+          <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3">
+            <a
+              href="https://wa.me/59176529243?text=Hola%20Angles%20Natural,%20quisiera%20recibir%20informaci%C3%B3n%20para%20ser%20Punto%20Aliado%20en%20la%20fase%20piloto."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full sm:w-auto"
+            >
+              <Button variant="primary" size="md" className="w-full">
+                Consultar Avances por WhatsApp
+              </Button>
+            </a>
+            <Button variant="secondary" size="md" onClick={onClose} className="w-full sm:w-auto">
+              Entendido
             </Button>
           </div>
-        )}
+        </div>
       </div>
     </div>
   );

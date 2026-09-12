@@ -26,14 +26,18 @@ export default function EcoPuntosPage() {
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto space-y-4">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#1b3d2b] border border-[#2d5a3f] text-[#52b788] text-xs font-semibold">
-            <Award className="w-3.5 h-3.5" /> Sistema de Incentivos Verificados
+            <Award className="w-3.5 h-3.5" /> Próximamente • Sistema de Incentivos Verificados
           </div>
           <h1 className="text-3xl sm:text-5xl font-serif text-[#f4f7f4] tracking-tight">
             Angles Eco-Puntos & Recompensas
           </h1>
           <p className="text-base text-[#a3b899] leading-relaxed">
-            Cada envase que retornas y cada jornada en la que participas se convierte en Eco-Puntos canjeables por descuentos, árboles plantados, merchandising ecológico y visitas a nuestro laboratorio.
+            Cada envase de Microbiota, Artromag o Kit de Mascotas que retornes se convertirá en Eco-Puntos canjeables por descuentos, donaciones a albergues de rescate y beneficios exclusivos de la comunidad.
           </p>
+          <div className="p-4 rounded-2xl bg-[#142317] border border-[#52b788]/30 text-xs text-[#52b788] max-w-lg mx-auto flex items-center justify-center gap-2">
+            <Sparkles className="w-4 h-4 shrink-0" />
+            <span><strong>Fase 2 en Preparación:</strong> Este sistema se activará conjuntamente con la apertura del Taller Piloto de Cochabamba.</span>
+          </div>
         </div>
 
         {/* Botanical Levels */}

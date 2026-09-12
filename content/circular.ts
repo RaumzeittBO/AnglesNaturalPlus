@@ -122,50 +122,26 @@ export interface ImpactRecord {
 
 export const INITIAL_COLLECTION_POINTS: CollectionPoint[] = [
   {
-    id: "punto-angles-central",
-    name: "Taller Piloto Angles Natural",
-    partnerName: "Angles Natural Lab",
-    address: "Zona Sopocachi, Av. 20 de Octubre",
-    city: "La Paz",
-    category: "TIENDA_SALUDABLE",
-    acceptedMaterials: ["Envases Doypack Angles", "Frascos de Vidrio Angles", "Tapas PE/PP", "Scoops"],
-    schedule: "Lunes a Viernes de 09:00 a 18:00",
-    whatsapp: "+59170000000",
-    lat: -16.5105,
-    lng: -68.1295,
-    status: "ACTIVE",
-    verifiedPartner: true,
-    notes: "Punto central de recepción y control de calidad de materiales."
-  },
-  {
-    id: "punto-aliado-fit-cbba",
-    name: "Punto Aliado Fitness & Salud",
-    partnerName: "Gimnasio Vitality",
-    address: "Zona Norte, Av. América",
+    id: "taller-piloto-cbba",
+    name: "Taller Piloto Angles Natural (Cochabamba)",
+    partnerName: "Angles Natural Lab & Taller",
+    address: "Calle San Felipe de Austria entre Melchor Pérez de Olguín y Av. Madrid",
     city: "Cochabamba",
-    category: "GIMNASIO",
-    acceptedMaterials: ["Envases Doypack Angles", "Scoops dosificadores"],
-    schedule: "Lunes a Sábado de 07:00 a 21:00",
+    category: "TIENDA_SALUDABLE",
+    acceptedMaterials: [
+      "Envases de Microbiota (Sobres limpios y caja)",
+      "Envases de Artromag (Sobres y caja)",
+      "Frascos y potes del Kit de Cuidado para Mascotas",
+      "Frascos y botellas de vidrio limpias",
+      "Tapas plásticas PE / PP"
+    ],
+    schedule: "Fase Piloto en Adecuación Técnica (Apertura Próxima)",
+    whatsapp: "+59176529243",
     lat: -17.3754,
     lng: -66.1568,
     status: "IN_SETUP",
     verifiedPartner: true,
-    notes: "En fase de adecuación del contenedor recolector seguro."
-  },
-  {
-    id: "punto-farmacia-scz",
-    name: "Farmacia Naturalis Equipetrol",
-    partnerName: "Farmacias Aliadas Santa Cruz",
-    address: "Barrio Equipetrol, Calle 7",
-    city: "Santa Cruz",
-    category: "FARMACIA",
-    acceptedMaterials: ["Frascos de Vidrio Angles", "Envases Doypack Angles"],
-    schedule: "Lunes a Domingo de 08:00 a 22:00",
-    lat: -17.7667,
-    lng: -63.1952,
-    status: "PROJECTION",
-    verifiedPartner: false,
-    notes: "Contacto inicial en curso."
+    notes: "Sede central de investigación circular, clasificación y preparación de materiales para retorno y reuso en Cochabamba."
   }
 ];
 

@@ -44,8 +44,8 @@ export default function DevuelveEnvasePage() {
               }`}
             >
               <div className="flex items-center gap-3">
-                <div className="w-12 h-12 rounded-xl bg-brand-sand/50 p-2 flex items-center justify-center shrink-0">
-                  <Image src={p.image || "/brand/logo.png"} alt={p.name} width={32} height={32} className="object-contain" />
+                <div className="w-12 h-12 rounded-xl bg-brand-sand/50 p-1 flex items-center justify-center shrink-0 relative overflow-hidden">
+                  <Image src={p.image || "/brand/logo.png"} alt={p.name} fill className="object-contain p-1" sizes="48px" />
                 </div>
                 <div>
                   <h3 className="font-semibold text-xs sm:text-sm text-brand-forest">{p.name}</h3>

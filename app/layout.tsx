@@ -4,6 +4,7 @@ import "./globals.css";
 import { SITE_CONTENT } from "@/content/site";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
+import { AmbientEcoBackground } from "@/components/ui/AmbientEcoBackground";
 
 const fraunces = Fraunces({
   subsets: ["latin"],
@@ -26,11 +27,12 @@ export const metadata: Metadata = {
   keywords: [
     "Angles Natural",
     "Andrea Angles",
-    "NutriQ",
+    "Microbiota",
+    "Artromag",
+    "Kit Mascotas",
     "Suplementación Funcional",
     "Bolivia",
-    "Tarwi",
-    "Cañahua",
+    "Cochabamba",
     "Angles Circular",
     "Ciencia y Naturaleza",
     "Sostenibilidad",
@@ -41,7 +43,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Angles Natural — Ciencia, Innovación y Propósito",
     description: "Plataforma oficial de bienestar y suplementación funcional desarrollada desde Bolivia.",
-    url: "https://anglesnatural.com",
+    url: "https://angles-natural-plus.vercel.app",
     siteName: "Angles Natural",
     locale: "es_BO",
     type: "website",
@@ -70,7 +72,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es" className={`${fraunces.variable} ${manrope.variable} scroll-smooth`}>
-      <body className="font-sans antialiased bg-brand-paper text-brand-ink min-h-screen flex flex-col selection:bg-brand-emerald selection:text-white">
+      <body className="font-sans antialiased bg-brand-paper text-brand-ink min-h-screen flex flex-col selection:bg-brand-emerald selection:text-white relative">
+        <AmbientEcoBackground />
         <Navbar />
         <div className="flex-1">{children}</div>
         <Footer />
